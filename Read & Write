@@ -1,0 +1,41 @@
+//Read & Write
+//Exercise 1
+Console.Write("Enter your Name:");
+string name = Console.ReadLine();
+Console.Write("Enter your Age:");
+int age = int.Parse(Console.ReadLine());
+Console.Write($"Hello {name} \nNext year you'll be {age + 1} years old \n");
+
+//===================================
+
+//Exercise 2
+Console.Write("Enter num1:");
+int num1 = int.Parse(Console.ReadLine());
+Console.Write("Enter num2:");
+int num2 = int.Parse(Console.ReadLine());
+
+//1way
+Console.WriteLine($"Sum = {num1 + num2}");
+Console.WriteLine($"Difference = {num1 - num2}");
+Console.WriteLine($"Product = {num1 * num2}");
+Console.WriteLine($"Division = {num1 / num2}");
+//2way
+Console.Write("Enter operator (+, -, *, /):");
+char op = char.Parse(Console.ReadLine());
+switch (op)
+{
+    case '+':
+        Console.WriteLine($"Sum = {num1 + num2}");
+        break;
+    case '-':
+        Console.WriteLine($"Difference = {num1 - num2}");
+        break;
+    case '*':
+        Console.WriteLine($"Product = {num1 * num2}");
+        break;
+    case '/':
+        Console.WriteLine($"Division = {num1 / num2}");
+        break;
+    default:
+        break;
+}
