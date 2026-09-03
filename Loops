@@ -1,1 +1,54 @@
 
+//Loops
+
+//exercise 7
+
+for (int i = 1; i <= 100; i++)
+{
+    if (i % 2 == 0)
+    {
+        Console.WriteLine(i);
+    }
+}
+
+//exercise 8
+
+Console.Write("Enter num: ");
+int num = int.Parse(Console.ReadLine());
+
+for (int i = 1; i <= 12; i++)
+{
+
+    Console.WriteLine($"{num} * {i} = {num * i}");
+}
+
+//exercise 9
+
+while (true) 
+{
+    Console.Write("Enter num: ");
+    int num1 = int.Parse(Console.ReadLine());
+    if (num1 == 0) 
+    {
+        break;
+    }
+    
+}
+
+//exercise 10
+
+do
+{
+    Console.Write("Enter password: ");
+    string num2 = Console.ReadLine();
+    if (num2 == "ITI123")
+    {
+        Console.WriteLine("\nWelcome to ITI!");
+        break;
+    }
+    else 
+    {
+        Console.WriteLine("Wrong password, try again.");
+    }
+
+}while (true) ;
