@@ -1,0 +1,61 @@
+//if / else if
+
+//exercise 3
+Console.Write("Enter your Grade: ");
+int grade = int.Parse(Console.ReadLine());
+
+if(grade < 0 || grade > 100)
+{
+    Console.WriteLine("Invalid Grade");
+}
+else if (grade>=90 && grade<=100)
+{
+    Console.WriteLine("A");
+}
+else if (grade >= 80 && grade < 90)
+{
+    Console.WriteLine("B");
+}
+else if (grade >= 70 && grade < 80)
+{
+    Console.WriteLine("C");
+}
+else if (grade >= 60 && grade < 70)
+{
+    Console.WriteLine("D");
+}
+else if (grade >= 0 && grade < 60)
+{
+    Console.WriteLine("F");
+}
+else
+{
+    Console.WriteLine("Invalid Grade");
+}
+
+
+//exercise 4
+
+Console.Write("\nEnter num1: ");
+int num1 = int.Parse(Console.ReadLine());
+Console.Write("Enter num2: ");
+int num2 = int.Parse(Console.ReadLine());
+Console.Write("Enter num3: ");
+int num3 = int.Parse(Console.ReadLine());
+
+if (num1 > num2 && num1 > num3)
+{
+    Console.WriteLine($"The largest number {num1}");
+}
+else if (num2 > num1 && num2 > num3)
+{
+    Console.WriteLine($"The largest number {num2}");
+}
+else if (num3 > num1 && num3 > num2)
+{
+    Console.WriteLine($"The largest number {num3}");
+}
+else
+{
+    Console.WriteLine("no largest number");
+}
