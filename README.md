@@ -1,4 +1,4 @@
-class student (Create Class/Constructor/Methods)
+class student (Create Class/Constructor/Methods) 
 Read & Write (Exercise 1/Exercise 2)
 if / else if (Exercise 3/Exercise 4)
 switch (Exercise 5/Exercise 6)
