@@ -1,0 +1,146 @@
+namespace task
+{
+    public class student    
+    {
+        
+        string name;
+        int age;
+        int grade;
+        
+        public void SetId(int value)
+        {
+            if (value >= 0 && value <= 100 )
+            {
+                grade = value;
+            }
+            else
+            {
+                Console.WriteLine("Error Id");
+            }
+        }
+        public int getId()
+        {
+            return grade;
+        }
+        public void SetName(string value)
+        {
+            if (value.All(c => (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
+            {
+                name = value;
+            }
+            else
+            {
+                Console.WriteLine("Error Name");
+            }
+        }
+        public string getName()
+        {
+            return name;
+        }
+        public void SetAge(int value)
+        {
+            if (value > 6 && value <=    22)
+            {
+                age = value;
+            }
+            else
+            {
+                Console.WriteLine("Error Age");
+            }
+        }
+        public int getAge()
+        {
+            return age;
+        }
+        public student(string Name = " ", int grade = 0, int Age = 0)
+        {
+            SetName(Name);
+            SetId(grade);
+            SetAge(Age);
+        }
+
+        public void print()
+        {
+            Console.WriteLine($"\nYour Name: {name}\nYour Id: {grade}\nYour Age: {age}\n");
+        }
+        public void IsPassed()
+        {
+           if(grade >= 50)
+           {
+               Console.WriteLine("Passed");
+           }
+           else
+           {
+               Console.WriteLine("Failed");
+           }
+        }
+        public void GradeStatus()
+        {
+            if (grade >= 90 && grade <= 100)
+            {
+                Console.WriteLine("Excellent");
+            }
+            else if (grade >= 80 && grade < 90)
+            {
+                Console.WriteLine("Very Good");
+            }
+            else if (grade >= 70 && grade < 80)
+            {
+                Console.WriteLine("Good");
+            }
+            else if (grade >= 60 && grade < 70)
+            {
+                Console.WriteLine("Pass");
+            }
+            else
+            {
+                Console.WriteLine("Failed");
+            }
+        }
+
+
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //1way
+            //===================
+            student student1 = new("ahmed",85, 20);
+            student1.print();
+            student1.IsPassed();
+            student1.GradeStatus();
+            student student2 = new("mohamed", 45, 21);
+            student2.print();
+            student2.IsPassed();
+            student2.GradeStatus();
+            student student3 = new("omer", 70, 19);
+            student3.print();
+            student3.IsPassed();
+            student3.GradeStatus();
+
+            //2way
+            //======================= 
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("\nEnter Name: ");
+                string name = Console.ReadLine();
+
+                Console.Write("Enter Grade: ");
+                int grade = int.Parse(Console.ReadLine());
+
+                Console.Write("Enter Age: ");
+                int age = int.Parse(Console.ReadLine());
+
+                student studentt = new(name, grade, age);
+                studentt.print();
+                studentt.IsPassed();
+                studentt.GradeStatus();
+
+                Console.WriteLine("\nGood luck \n");
+            }
+            
+        }
+    }
+}
