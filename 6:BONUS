@@ -1,0 +1,47 @@
+
+//Bonus
+Random random = new Random();
+
+while (true) 
+{
+    int num1 = random.Next(1, 101);
+    int i =1 ;
+    while (true)
+    {
+        Console.Write("Guess the number: ");
+        string input = Console.ReadLine();
+        if (int.TryParse(input, out int num2))
+        {
+            if (num1 == num2)
+            {
+                Console.WriteLine("Number Correct");
+                Console.WriteLine($"\nNumbers try: {i}");
+                break;
+            }
+            else if (num1 < num2)
+            {
+                Console.WriteLine("Number High");
+            }
+            else if (num1 > num2)
+            {
+                Console.WriteLine("Number Low");
+            }
+        }
+        else 
+        {
+            Console.WriteLine("Invalid input, please enter a valid number.");
+        }
+
+        i++;
+    }
+
+    Console.Write("want to play again? (y/n): ");
+    string ans = Console.ReadLine();
+    if (ans != "y" && ans != "Y")
+    {
+        Console.WriteLine("\nBye..............");
+        break;
+    }
+    
+
+}
