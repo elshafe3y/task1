@@ -37,11 +37,11 @@ switch (num)
 
 Console.Write("\nEnter num1:");
 int num1 = int.Parse(Console.ReadLine());
+Console.Write("Enter operator (+, -, *, /):");
+char op = char.Parse(Console.ReadLine());
 Console.Write("Enter num2:");
 int num2 = int.Parse(Console.ReadLine());
 
-Console.Write("Enter operator (+, -, *, /):");
-char op = char.Parse(Console.ReadLine());
 switch (op)
 {
     case '+':
@@ -57,5 +57,6 @@ switch (op)
         Console.WriteLine($"Division = {num1 / num2}");
         break;
     default:
+        Console.WriteLine("Invalid operator");
         break;
 }
